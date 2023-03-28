@@ -25,8 +25,10 @@ class UsuarioController extends Controller
         return view('usuarios/minha-conta');
     }
 
-    public function fazerLogin()
+    public function fazerLogin(Request $request)
     {
-        dd("kuvoa sudasd");
+        $form = $request->all();
+        
+        dd($form['login']);
     }
 }
